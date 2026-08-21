@@ -1,0 +1,26 @@
+{
+  "name": "simple-import-verify",
+  "version": "0.1.0",
+  "description": "Warn when new imports reference packages not listed in the project manifest.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --platform=node --target=node20 --outfile=dist/index.js --format=cjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "imports",
+    "dependencies",
+    "lockfile"
+  ],
+  "author": "Dmytro Paduchak",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "esbuild": "^0.25.1",
+    "typescript": "^5.8.2"
+  }
+}
